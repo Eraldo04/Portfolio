@@ -1,0 +1,492 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    background: rgb(56, 71, 93);
+}
+
+.logo {
+    display: inline-block;
+}
+
+.logo img {
+    width: 4.38em;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 1.25em;
+}
+
+.sticky {
+    position: fixed;
+    background: rgb(56, 71, 93);
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+nav ul {
+    display: inline-block;
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 1.25em;
+}
+
+a {
+    text-decoration: none;
+    color: darkgray;
+}
+
+nav ul li a:hover {
+    color: rgb(109, 125, 148);
+}
+
+.top-container {
+    max-width: 81.25em;
+    margin: auto;
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+}
+
+.container {
+    margin-top: 3.13em;
+}
+
+.container h1 {
+    color: darkgray;
+    font-size: 3.13em;
+}
+
+
+/* Menu phoyo for mobile */
+
+.menu-photo {
+    width: 2.5em;
+    margin-left: 1.38em;
+    display: none;
+}
+
+
+/* PHONE MODE */
+
+@media only screen and (max-width: 600px) {
+    nav {
+        display: none;
+    }
+    nav ul {
+        position: absolute;
+        top: 4.38em;
+        left: 0;
+        background: transparent;
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5s;
+    }
+    nav ul li {
+        display: block;
+        margin-right: 3.13em;
+        margin-top: 0.63em;
+        margin-bottom: 0.63em;
+    }
+    nav ul li a {
+        color: darkgray;
+    }
+    .menu-photo {
+        display: flex;
+        position: absolute;
+        top: 0.8em;
+        right: 0.5em;
+        cursor: pointer;
+    }
+    .active {
+        display: flex;
+    }
+}
+
+.walp {
+    margin-top: 1.25em;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.walp h1 {
+    color: whitesmoke;
+}
+
+.animated-text {
+    display: inline-flex;
+}
+
+.animated-text .static-text {
+    margin-top: 0.63em;
+    color: #fff;
+    font-size: 3.75em;
+    font-weight: normal;
+}
+
+.animated-text .dynamic-text {
+    margin-left: 10.31em;
+    height: 5.63em;
+    line-height: 5.63em;
+    overflow: hidden;
+}
+
+.dynamic-text li {
+    color: darkgray;
+    list-style-type: none;
+    font-size: 5em;
+    font-weight: Medium;
+    position: relative;
+    top: 0;
+}
+
+.dynamic-text li span {
+    position: relative;
+    margin: 0.31em 0;
+    line-height: 5.63em;
+}
+
+.dynamic-text li span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgb(56, 71, 93);
+    border-left: 2px solid darkgray;
+    animation: typing 2.2s steps(20) infinite;
+}
+
+@keyframes typing {
+    100% {
+        left: 100%;
+        margin: 0 -2.19em 0 2.19em;
+    }
+}
+
+.col-2 {
+    flex-basis: 50%;
+    min-width: 18.75em;
+    padding-left: 3.13em;
+}
+
+.col-2 span {
+    color: darkgray;
+}
+
+.col-2 img {
+    max-width: 100%;
+    padding-right: 2.81em;
+}
+
+.col-2 p {
+    font-size: 2.5em;
+    line-height: 2.19em;
+    margin: 2.5em 0;
+}
+
+
+/* Buttons */
+
+.btn,
+.modal-btn,
+.footer-btn,
+.exp-btn,
+.exp-btn2,
+.exp-btn3 {
+    display: inline-block;
+    background: rgb(136, 134, 134);
+    color: palegreen;
+    padding: 0.63em 2.5em;
+    margin: 2.5em 0;
+    border-radius: 2.5em;
+    cursor: pointer;
+}
+
+
+/* Buttons Hover */
+
+.btn,
+.modal-btn,
+.footer-btn:hover {
+    background: rgb(61, 60, 60);
+}
+
+.social-media {
+    position: absolute;
+    bottom: 20%;
+    left: 0;
+}
+
+.social-media ul li {
+    list-style-type: none;
+    width: 6.25em;
+    height: 6.25em;
+    padding: 0.31em 2.5em;
+}
+
+.hr1 {
+    writing-mode: vertical-lr;
+    height: 10.63em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 2.19em;
+}
+
+.hr {
+    writing-mode: vertical-lr;
+    height: 10.63em;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0 2.19em;
+}
+
+.email {
+    color: darkgray;
+    writing-mode: vertical-lr;
+    position: absolute;
+    bottom: 30%;
+    right: 0;
+    padding: 0 2.5em;
+}
+
+.hr2 {
+    writing-mode: vertical-lr;
+    height: 11.25em;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0 2.81em;
+}
+
+.selfie {
+    width: 50%;
+    height: 50%;
+}
+
+.hr4 {
+    width: 20%;
+    text-align: center;
+    margin: 2.19em auto;
+}
+
+.exp-img {
+    width: 100%;
+}
+
+.col-3 {
+    flex-basis: 30%;
+    min-width: 13.13em;
+    margin-bottom: 3.13em;
+    padding: 0 3.13em;
+    transition: transform 0.5s;
+}
+
+.col-3:hover {
+    transform: translateY(-0.63em);
+}
+
+.col-3 img {
+    width: 100%;
+}
+
+.small-container p {
+    padding-left: 4.38em;
+    font-size: 2.5em;
+    line-height: 2.19em;
+    margin: 2.5em 0;
+}
+
+
+/* Contact modal form */
+
+.modal-bg {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s;
+}
+
+.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal {
+    position: relative;
+    background-color: rgb(56, 71, 93);
+    color: whitesmoke;
+    width: 90%;
+    padding: 2.19em 5em;
+    max-width: 37.5em;
+    border-radius: 0.63em;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal input,
+.modal textarea {
+    border: 0;
+    margin: 0.63em 0;
+    padding: 1.25em;
+    outline: none;
+    font-size: 1em;
+}
+
+.modal-btn {
+    display: inline-block;
+    background: rgb(136, 134, 134);
+    color: palegreen;
+    padding: 0.63em 2.5em;
+    margin: 1.25em 0;
+    border-radius: 2.5em;
+    cursor: pointer;
+}
+
+.modal-btn:hover {
+    background-color: rgb(61, 60, 60);
+}
+
+.modal-close {
+    position: absolute;
+    top: 0.63em;
+    right: 1.56em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: ease 0.5s;
+}
+
+.modal button {
+    display: inline-block;
+    background: rgb(136, 134, 134);
+    color: palegreen;
+    padding: 0.63em 2.5em;
+    margin: 2.5em 0;
+    border-radius: 2.5em;
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    color: black;
+}
+
+
+/* EXPERIENCE */
+
+.experiences {
+    margin: auto;
+    max-width: 81.25em;
+}
+
+.small-container span {
+    color: darkgray;
+}
+
+.exp h1 {
+    text-align: center;
+    color: darkgrey;
+}
+
+.exp-content2 {
+    position: absolute;
+    top: 101.75em;
+    right: 1.56em;
+}
+
+.exp-content3 {
+    position: absolute;
+    top: 101.75em;
+    right: 1.56em;
+}
+
+.experience-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.exp-img {
+    text-align: center;
+}
+
+.exp-text {
+    text-align: center;
+    margin-top: 0.63em;
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+
+/* Footer */
+
+.footer-container {
+    position: relative;
+    background-image: linear-gradient(180deg, rgb(56, 71, 93), rgb(33, 34, 34));
+    color: whitesmoke;
+    width: 100%;
+    padding: 2.19em 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.btn-footer button {
+    width: 12.5em;
+}
+
+.contact-a {
+    background: rgb(56, 71, 93);
+    color: darkgray;
+}
+
+.contact-a:hover {
+    background: rgb(56, 71, 93);
+}
+
+
+/* Scroll to the top Button */
+
+.scrollTop {
+    position: absolute;
+    bottom: 3.13em;
+    right: 1.25em;
+    width: 3.13em;
+    height: 1.88em;
+    background-image: linear-gradient(180deg, rgb(56, 71, 93), rgb(33, 34, 34));
+    cursor: pointer;
+    border-radius: 5%;
+    transition: all 0.5s, ease 0s;
+}
+
+.scrollTop:hover {
+    background: rgb(136, 134, 134);
+}
